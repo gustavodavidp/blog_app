@@ -1,0 +1,18 @@
+
+<p>
+<h2 align="center">Titulo: <%= @article.title %></h2>
+<div class="well col-xs-8 col-xs-offset-2">
+ <h4 class="center"><strong>Descripcion:</strong></h4>
+ <hr>
+ <%= simple_format(@article.text) %>
+ <h4>Comentarios</h4>
+<%= render @article.comments %>
+
+<h4>Añade un comentario:</h4>
+<%= render 'comments/form' %>
+<%= link_to "Edit", edit_article_path(@article), class: "btn btn-xs btn-primary" %> |
+<%= link_to 'Back', articles_path, class: "btn btn-xs btn-success" %>
+
+ 
+
+
