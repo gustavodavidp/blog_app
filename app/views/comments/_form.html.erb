@@ -1,4 +1,5 @@
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+<<<<<<< HEAD
   <p>
     <%= form.label :commenter %><br>
     <%= form.text_field :commenter %>
@@ -11,3 +12,17 @@
     <%= form.submit %>
   </p>
 <% end %>
+=======
+    <p>
+      <%= form.label :Usuario %><br>
+      <%= form.text_field :commenter %>
+    </p>
+    <p>
+      <%= form.label :Comentario %><br>
+      <%= form.text_area :body %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+>>>>>>> actualizacion

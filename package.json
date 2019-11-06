@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "blog_app",
+=======
+  "name": "blog_app2",
+>>>>>>> actualizacion
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0-alpha",

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class User < ActiveRecord::Base
 	has_many :articles
 	validates :username, presence: true, uniqueness: true, length: { minimum: 3, maximum: 25 }
@@ -7,3 +8,11 @@ class User < ActiveRecord::Base
  	before_save { self.email = email.downcase }
 
 end
+=======
+class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+end
+>>>>>>> actualizacion

@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_11_02_193921) do
+=======
+ActiveRecord::Schema.define(version: 2019_11_06_200527) do
+>>>>>>> actualizacion
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +24,10 @@ ActiveRecord::Schema.define(version: 2019_11_02_193921) do
     t.text "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+<<<<<<< HEAD
     t.integer "user_id"
+=======
+>>>>>>> actualizacion
   end
 
   create_table "comments", force: :cascade do |t|
@@ -33,10 +40,22 @@ ActiveRecord::Schema.define(version: 2019_11_02_193921) do
   end
 
   create_table "users", force: :cascade do |t|
+<<<<<<< HEAD
     t.string "username"
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+=======
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+>>>>>>> actualizacion
   end
 
   add_foreign_key "comments", "articles"

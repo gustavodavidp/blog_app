@@ -1,13 +1,21 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html>
   <head>
 
     <title>BlogApp</title>
+=======
+
+<html>
+  <head>
+    <title>BlogApp2</title>
+>>>>>>> actualizacion
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+<<<<<<< HEAD
 
   </head>
 
@@ -15,6 +23,20 @@
     <%= render 'layouts/navigation' %>
     <%= render 'shared/messages' %>
     <%= debug(params) if Rails.env.development? %> 
+=======
+    
+  </head>
+
+  <body>
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <%= render 'layouts/navigation' %>
+    
+>>>>>>> actualizacion
     <%= yield %>
   </body>
 </html>
